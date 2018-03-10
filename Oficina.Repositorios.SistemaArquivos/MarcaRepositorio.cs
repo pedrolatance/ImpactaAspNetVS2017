@@ -1,20 +1,16 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
+using System.Configuration;
 using Oficina.Dominio;
+
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
     public class MarcaRepositorio
     {
-
         private string _caminhoArquivoMarca = ConfigurationManager.AppSettings["caminhoArquivoMarca"];
-
-
-
+        
         public List<Marca> Selecionar()
         {
             var marcas = new List<Marca>();

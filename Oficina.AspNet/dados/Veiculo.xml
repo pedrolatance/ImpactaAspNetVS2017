@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<veiculos>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Id&gt;2&lt;/Id&gt;
+  &lt;Placa&gt;ABC-1245&lt;/Placa&gt;
+  &lt;Ano&gt;2015&lt;/Ano&gt;
+  &lt;Observacao&gt;Nada a declarar&lt;/Observacao&gt;
+  &lt;Cor&gt;
+    &lt;Id&gt;1&lt;/Id&gt;
+    &lt;Nome&gt;Preto&lt;/Nome&gt;
+  &lt;/Cor&gt;
+  &lt;Modelo&gt;
+    &lt;Id&gt;43&lt;/Id&gt;
+    &lt;Nome&gt;Golf&lt;/Nome&gt;
+    &lt;Marca&gt;
+      &lt;Id&gt;2&lt;/Id&gt;
+      &lt;Nome&gt;WV&lt;/Nome&gt;
+    &lt;/Marca&gt;
+  &lt;/Modelo&gt;
+  &lt;Combustivel&gt;Flex&lt;/Combustivel&gt;
+  &lt;Cambio&gt;Manual&lt;/Cambio&gt;
+&lt;/Veiculo&gt;<Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Id>1</Id><Placa>ABC-1245</Placa><Ano>2015</Ano><Observacao>Nada a declarar</Observacao><Cor><Id>1</Id><Nome>Preto</Nome></Cor><Modelo><Id>3</Id><Nome>Amarok</Nome><Marca><Id>2</Id><Nome>WV</Nome></Marca></Modelo><Combustivel>Flex</Combustivel><Cambio>Manual</Cambio></Veiculo></veiculos>

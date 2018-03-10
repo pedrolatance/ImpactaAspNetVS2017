@@ -1,0 +1,50 @@
+﻿@using Oficina.AspNet;
+@{
+    var _veiculoApp = new VeiculoApp();
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta lang="pt-br" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastro de Veiculos</title>
+</head>
+<body>
+    <h1>Cadastro de Veículos</h1>
+    <hr />
+    <form action="/" method="post">
+        <label for="marca">Marca: </label>
+        <select id="marca" onchange="obterModelos(this.value)">
+            <option value="">Selecione...</option>
+            @foreach (var marca in _veiculoApp.Marcas)
+            {
+                <option value="@marca.Id">@marca.Nome</option>
+            }
+            </select> 
+        <br />
+        <label for="modelo">Modelo: </label>
+        <select id="modelo">
+            <option value="">Selecione...</option>
+            @foreach (var modelo in _veiculoApp.Modelos)
+            {
+                <option value="@modelo.Id">@modelo.Nome</option>
+            }
+        </select>
+        
+
+        </form>
+
+    <script type="text/javascript">
+
+        function obterModelos(marcaId) {
+            document.location.href = "Veiculo?marcaId=" + marcaId;
+        }
+
+    </script>
+    </body>
+</html>
+

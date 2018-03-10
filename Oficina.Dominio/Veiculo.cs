@@ -18,6 +18,5 @@ namespace Oficina.Dominio
         public Combustivel Combustivel { get; set; }
         public Cambio Cambio { get; set; }
 
-
     }
 }
