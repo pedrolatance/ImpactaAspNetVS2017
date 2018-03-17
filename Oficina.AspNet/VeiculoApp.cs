@@ -46,7 +46,7 @@ namespace Oficina.AspNet
 
         public void Gravar()
         {
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
 
             var formulario = HttpContext.Current.Request.Form;
 
@@ -58,6 +58,7 @@ namespace Oficina.AspNet
             veiculo.Modelo = _modeloRepositorio.Selecionar(Convert.ToInt32(formulario["modelo"]));
             veiculo.Placa = formulario["placa"];
             veiculo.Observacao = formulario["observacao"];
+            veiculo.Carroceria = TipoCarroceria.Pickup;
 
 
             _veiculoRepositorio.Inserir(veiculo);

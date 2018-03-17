@@ -18,7 +18,7 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         {
             var repositorio = new VeiculoRepositorio();
 
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
 
             //veiculo.Id = 1;
             veiculo.Placa = "ABC-1245";
@@ -28,8 +28,11 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
             veiculo.Combustivel = Combustivel.Flex;
             veiculo.Cor = new CorRepositorio().Selecionar(1);
             veiculo.Modelo = new ModeloRepositorio().Selecionar(3);
+            veiculo.Carroceria = TipoCarroceria.Hatch;
 
             repositorio.Inserir(veiculo);
+
+            Console.WriteLine(veiculo.ToString());
 
         }
     }

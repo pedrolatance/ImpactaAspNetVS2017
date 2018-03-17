@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capítulo06.http.testes", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.AspNet", "Oficina.AspNet\Oficina.AspNet.csproj", "{8A3BE53E-3289-4DFA-A9F7-E632844D16EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo04.Colecoes.Testes", "Capitulo04.Colecoes.Testes\Capitulo04.Colecoes.Testes.csproj", "{D238237E-6D8D-4663-B20C-90733DC20AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{8A3BE53E-3289-4DFA-A9F7-E632844D16EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A3BE53E-3289-4DFA-A9F7-E632844D16EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A3BE53E-3289-4DFA-A9F7-E632844D16EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D238237E-6D8D-4663-B20C-90733DC20AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D238237E-6D8D-4663-B20C-90733DC20AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D238237E-6D8D-4663-B20C-90733DC20AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D238237E-6D8D-4663-B20C-90733DC20AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
