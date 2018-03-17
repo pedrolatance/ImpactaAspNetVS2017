@@ -20,7 +20,7 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
 
             var veiculo = new Veiculo();
 
-            veiculo.Id = 1;
+            //veiculo.Id = 1;
             veiculo.Placa = "ABC-1245";
             veiculo.Ano = 2015;
             veiculo.Observacao = "Nada a declarar";
