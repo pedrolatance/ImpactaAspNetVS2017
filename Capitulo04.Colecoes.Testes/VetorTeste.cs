@@ -54,6 +54,18 @@ namespace Capitulo04.Colecoes.Testes
             Console.WriteLine(CalcMedia(1.7m, 0.3m, 15, 2.5m));
         }
 
+
+        [TestMethod]
+        public void StringsSaoVetoresTeste()
+        {
+            var nome = "Pedro";
+
+            foreach (var caractere in nome)
+            {
+                Console.WriteLine(caractere);
+            }
+        }
+
         private decimal CalcMedia(decimal valor1, decimal valor2)
         {
             return (valor1 + valor2) / 2;
@@ -71,6 +83,8 @@ namespace Capitulo04.Colecoes.Testes
             return soma / valores.Length;
 
         }
+
+
     }
 }
 

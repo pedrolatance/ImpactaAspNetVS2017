@@ -13,14 +13,24 @@ namespace Oficina.Repositorios.SistemaArquivos
 
         public void Inserir(VeiculoPasseio veiculo)
         {
-           var veiculos = XDocument.Load(_caminhoArquivoVeiculo);
+            var veiculos = XDocument.Load(_caminhoArquivoVeiculo);
 
-           var registro = new StringWriter();
-           new XmlSerializer(typeof(VeiculoPasseio)).Serialize(registro, veiculo);
+            var registro = new StringWriter();
+            new XmlSerializer(typeof(VeiculoPasseio))
+                .Serialize(registro, veiculo);
 
-           veiculos.Root.Add(XElement.Parse(registro.ToString()));
+            veiculos.Root.Add(XElement.Parse(registro.ToString()));
 
-           veiculos.Save(_caminhoArquivoVeiculo);
+            veiculos.Save(_caminhoArquivoVeiculo);
+
+            //var veiculos = XDocument.Load(_caminhoArquivoVeiculo);
+
+            //var registro = new StringWriter();
+            //new XmlSerializer(typeof(VeiculoPasseio)).Serialize(registro, veiculo);
+
+            //veiculos.Root.Add(XElement.Parse(registro.ToString()));
+
+            //veiculos.Save(_caminhoArquivoVeiculo);
         }  
     }
 }

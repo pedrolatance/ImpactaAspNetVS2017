@@ -1,22 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<veiculos>&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;Id&gt;2&lt;/Id&gt;
-  &lt;Placa&gt;ABC-1245&lt;/Placa&gt;
-  &lt;Ano&gt;2015&lt;/Ano&gt;
-  &lt;Observacao&gt;Nada a declarar&lt;/Observacao&gt;
-  &lt;Cor&gt;
-    &lt;Id&gt;1&lt;/Id&gt;
-    &lt;Nome&gt;Preto&lt;/Nome&gt;
-  &lt;/Cor&gt;
-  &lt;Modelo&gt;
-    &lt;Id&gt;43&lt;/Id&gt;
-    &lt;Nome&gt;Golf&lt;/Nome&gt;
-    &lt;Marca&gt;
-      &lt;Id&gt;2&lt;/Id&gt;
-      &lt;Nome&gt;WV&lt;/Nome&gt;
-    &lt;/Marca&gt;
-  &lt;/Modelo&gt;
-  &lt;Combustivel&gt;Flex&lt;/Combustivel&gt;
-  &lt;Cambio&gt;Manual&lt;/Cambio&gt;
-&lt;/Veiculo&gt;<Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Id>1</Id><Placa>ABC-1245</Placa><Ano>2015</Ano><Observacao>Nada a declarar</Observacao><Cor><Id>1</Id><Nome>Preto</Nome></Cor><Modelo><Id>3</Id><Nome>Amarok</Nome><Marca><Id>2</Id><Nome>WV</Nome></Marca></Modelo><Combustivel>Flex</Combustivel><Cambio>Manual</Cambio></Veiculo><Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Id>cd4650c7-dcdc-4991-9f18-eed70bbbc781</Id><Placa>ABC1234</Placa><Ano>2015</Ano><Observacao>asdsdasdasdasdasdsad</Observacao><Cor><Id>1</Id><Nome>Preto</Nome></Cor><Modelo><Id>3</Id><Nome>Amarok</Nome><Marca><Id>2</Id><Nome>WV</Nome></Marca></Modelo><Combustivel>Gasolina</Combustivel><Cambio>Automatico</Cambio></Veiculo></veiculos>
+<veiculos>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>9e034977-46be-4fe2-9e7b-ef0a55309bd1</Id>
+    <Placa>ABC1234</Placa>
+    <Ano>2015</Ano>
+    <Observacao>Teste Teste Teste</Observacao>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Azul</Nome>
+    </Cor>
+    <Modelo>
+      <Id>7</Id>
+      <Nome>Cruise</Nome>
+      <Marca>
+        <Id>4</Id>
+        <Nome>GM</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Carroceria>Pickup</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>b8751401-9f6b-4b11-af9e-e37afac2ba95</Id>
+    <Placa>ABC1234</Placa>
+    <Ano>2015</Ano>
+    <Observacao>1232131231qwewewew</Observacao>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Fiesta</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Ford</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Automatizado</Cambio>
+    <Carroceria>Pickup</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>e8ce792a-771d-4352-8845-45c2df1911c9</Id>
+    <Placa>ABC1234</Placa>
+    <Ano>2018</Ano>
+    <Observacao>fskdjfsdjfhkjsdhfkjdshf</Observacao>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Azul</Nome>
+    </Cor>
+    <Modelo>
+      <Id>5</Id>
+      <Nome>Mobi</Nome>
+      <Marca>
+        <Id>3</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Alcool</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Carroceria>Pickup</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>71ec2e6c-73b3-43eb-ba75-e205d35d73eb</Id>
+    <Placa>HGB5236</Placa>
+    <Ano>2015</Ano>
+    <Observacao>dgfgfdfgfgfgf</Observacao>
+    <Cor>
+      <Id>3</Id>
+      <Nome>Amarelo</Nome>
+    </Cor>
+    <Modelo>
+      <Id>3</Id>
+      <Nome>Amarok</Nome>
+      <Marca>
+        <Id>2</Id>
+        <Nome>WV</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Automatico</Cambio>
+    <Carroceria>Pickup</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>fbc12085-23f7-43ee-9aed-14f1be6c9a0c</Id>
+    <Placa>ASLS</Placa>
+    <Ano>2323</Ano>
+    <Observacao>qeqweqwewqe</Observacao>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Fiesta</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Ford</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Automatico</Cambio>
+    <Carroceria>Pickup</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>a71091d9-9fab-4403-8622-6142ca2eae3f</Id>
+    <Placa>ASDSAD</Placa>
+    <Ano>2332</Ano>
+    <Observacao>asdasds</Observacao>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Azul</Nome>
+    </Cor>
+    <Modelo>
+      <Id>3</Id>
+      <Nome>Amarok</Nome>
+      <Marca>
+        <Id>2</Id>
+        <Nome>WV</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Automatico</Cambio>
+    <Carroceria>Pickup</Carroceria>
+  </VeiculoPasseio>
+</veiculos>
