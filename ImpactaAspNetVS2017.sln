@@ -35,6 +35,39 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pessoal.Repositorios.SqlSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pessoal.Repositorios.SqlServerTests", "Pessoal.Repositorios.SqlServerTests\Pessoal.Repositorios.SqlServerTests.csproj", "{9FC1C536-4836-4799-80BF-559BE3C838C3}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Pessoal.Database", "Pessoal.Database\Pessoal.Database.sqlproj", "{B52CAD1F-9F15-42DB-9CB8-2BDB2E7531EC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Pessoal.WebForms", "Pessoal.WebForms\", "{AC8A9F95-B7E4-4A3D-87B0-AFAE63572E71}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7"
+		ProjectReferences = "{cb3c8332-7a3e-4a21-b234-1f8d723d2313}|Pessoal.Dominio.dll;{003b5437-b6e6-4c82-a192-b65ecf0ebd96}|Pessoal.Repositorios.SqlServer.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52578"
+		Debug.AspNetCompiler.PhysicalPath = "Pessoal.WebForms\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52578\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52578"
+		Release.AspNetCompiler.PhysicalPath = "Pessoal.WebForms\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52578\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52578"
+		SlnRelativePath = "Pessoal.WebForms\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Loja", "Loja", "{D0BE3013-395C-45A7-ADF0-6C6A22141DE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Domain", "Loja.Domain\Loja.Domain.csproj", "{3EC353F8-F001-4EF3-B4EE-C29141344AB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Repository", "Loja.Repository\Loja.Repository.csproj", "{BFF86130-A03F-44F5-8ACC-AC89C310C2C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.RepositoryTests", "Loja.RepositoryTests\Loja.RepositoryTests.csproj", "{D785667B-B9D7-4E32-B92F-C1ECBBDD2CCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +130,28 @@ Global
 		{9FC1C536-4836-4799-80BF-559BE3C838C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FC1C536-4836-4799-80BF-559BE3C838C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FC1C536-4836-4799-80BF-559BE3C838C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52CAD1F-9F15-42DB-9CB8-2BDB2E7531EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B52CAD1F-9F15-42DB-9CB8-2BDB2E7531EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B52CAD1F-9F15-42DB-9CB8-2BDB2E7531EC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B52CAD1F-9F15-42DB-9CB8-2BDB2E7531EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B52CAD1F-9F15-42DB-9CB8-2BDB2E7531EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52CAD1F-9F15-42DB-9CB8-2BDB2E7531EC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AC8A9F95-B7E4-4A3D-87B0-AFAE63572E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8A9F95-B7E4-4A3D-87B0-AFAE63572E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8A9F95-B7E4-4A3D-87B0-AFAE63572E71}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8A9F95-B7E4-4A3D-87B0-AFAE63572E71}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3EC353F8-F001-4EF3-B4EE-C29141344AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC353F8-F001-4EF3-B4EE-C29141344AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC353F8-F001-4EF3-B4EE-C29141344AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC353F8-F001-4EF3-B4EE-C29141344AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF86130-A03F-44F5-8ACC-AC89C310C2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF86130-A03F-44F5-8ACC-AC89C310C2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF86130-A03F-44F5-8ACC-AC89C310C2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF86130-A03F-44F5-8ACC-AC89C310C2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D785667B-B9D7-4E32-B92F-C1ECBBDD2CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D785667B-B9D7-4E32-B92F-C1ECBBDD2CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D785667B-B9D7-4E32-B92F-C1ECBBDD2CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D785667B-B9D7-4E32-B92F-C1ECBBDD2CCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +164,11 @@ Global
 		{CB3C8332-7A3E-4A21-B234-1F8D723D2313} = {F6E1D0C0-B891-40FA-A09C-F7095D25171F}
 		{003B5437-B6E6-4C82-A192-B65ECF0EBD96} = {F6E1D0C0-B891-40FA-A09C-F7095D25171F}
 		{9FC1C536-4836-4799-80BF-559BE3C838C3} = {F6E1D0C0-B891-40FA-A09C-F7095D25171F}
+		{B52CAD1F-9F15-42DB-9CB8-2BDB2E7531EC} = {F6E1D0C0-B891-40FA-A09C-F7095D25171F}
+		{AC8A9F95-B7E4-4A3D-87B0-AFAE63572E71} = {F6E1D0C0-B891-40FA-A09C-F7095D25171F}
+		{3EC353F8-F001-4EF3-B4EE-C29141344AB8} = {D0BE3013-395C-45A7-ADF0-6C6A22141DE4}
+		{BFF86130-A03F-44F5-8ACC-AC89C310C2C8} = {D0BE3013-395C-45A7-ADF0-6C6A22141DE4}
+		{D785667B-B9D7-4E32-B92F-C1ECBBDD2CCF} = {D0BE3013-395C-45A7-ADF0-6C6A22141DE4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAC1F07A-2DBD-47AE-9836-667B59423BAF}

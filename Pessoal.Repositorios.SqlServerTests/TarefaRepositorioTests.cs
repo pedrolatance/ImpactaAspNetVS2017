@@ -42,7 +42,33 @@ namespace Pessoal.Repositorios.SqlServer.Tests
 
             _tarefaRepositorio.Atualizar(tarefa);
 
-           
+
+        }
+
+        [TestMethod()]
+        public void SelecionarTest()
+        {
+            var tarefas = _tarefaRepositorio.Selecionar();
+
+            Assert.IsTrue(tarefas.Count != 0);
+        }
+
+        [TestMethod()]
+        public void SelecionarPorIdTest()
+        {
+            var tarefa = _tarefaRepositorio.Selecionar(2);
+
+            Assert.IsNotNull(tarefa);
+        }
+
+        [TestMethod()]
+        public void ExcluirTest()
+        {
+            _tarefaRepositorio.Excluir(1);
+
+            var tarefa = _tarefaRepositorio.Selecionar(1);
+
+            Assert.IsNull(tarefa);
         }
     }
 }
