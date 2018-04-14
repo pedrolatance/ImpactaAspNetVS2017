@@ -1,4 +1,5 @@
 ﻿using Loja.Domain;
+using Loja.Repository.Migrations;
 using Loja.Repository.ModelConfiguration;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -9,7 +10,9 @@ namespace Loja.Repository
     {
         public LojaDbContext() : base("lojaConnectionString")
         {
+            //Database.SetInitializer(new LojaDbInitialyzer());
 
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<LojaDbContext,Configuration>());
         }
 
         public DbSet<Produto> Produtos { get; set; }
@@ -22,8 +25,6 @@ namespace Loja.Repository
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Configurations.Add(new ProdutoConfiguration());
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
-        }
-
-        
+        }        
     }
 }
