@@ -69,10 +69,13 @@ namespace Loja.Mvc.Controllers
             return View(produto);
         }
 
+
         // GET: Produtos/Create
         public ActionResult Create()
         {
-            return View(Mapear(new Produto()));
+            ViewBag.Titulo = "Novo Produto";
+
+            return View("~/Views/Produtos/CreateOrEdit.cshtml", Mapear(new Produto()));
         }
 
         // POST: Produtos/Create
@@ -81,14 +84,21 @@ namespace Loja.Mvc.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(ProdutoViewModel viewModel)
+        //public ActionResult Create(int id, string nome, decimal preco)
+        //public ActionResult Create(FormCollection formulario)
         {
+            //var nome = formulario["nome"];
+
             if (ModelState.IsValid)
             {
-                db.Produtos.Add(Mapear(viewModel));
+                var produto = Mapear(viewModel);
+
+                db.Produtos.Add(produto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(viewModel);
+
+            return View("~/Views/Produtos/CreateOrEdit.cshtml", viewModel);
         }
 
         private Produto Mapear(ProdutoViewModel viewModel)
@@ -167,6 +177,14 @@ namespace Loja.Mvc.Controllers
             db.Produtos.Remove(produto);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        [ActionName("Categoria")]
+        public JsonResult ObterProdutoPorCategoria(int? categoriaId)
+        {
+            return Json(db.Produtos
+                .Where(c => c.Categoria.Id == categoriaId)
+                .ToList(), JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)

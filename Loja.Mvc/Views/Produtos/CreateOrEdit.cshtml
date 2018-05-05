@@ -1,17 +1,14 @@
 ﻿@model Loja.Mvc.Models.ProdutoViewModel
 
-@{
-    ViewBag.Title = "Edit";
-}
-
-<h2>Edit</h2>
+<h2>@ViewBag.Titulo</h2>
 
 @Html.Partial("~/Views/Produtos/_ProdutoForm.cshtml", Model)
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/produtos/produto.js"></script>
 }
