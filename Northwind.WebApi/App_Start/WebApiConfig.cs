@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Northwind.WebApi
 {
@@ -18,10 +19,14 @@ namespace Northwind.WebApi
             json.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             json.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
 
+            config.EnableCors(new EnableCorsAttribute("*","*","*"));
+
 
             //var json = config.Formatters.JsonFormatter;
             //json.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
             //config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+
 
             // Web API routes
             config.MapHttpAttributeRoutes();

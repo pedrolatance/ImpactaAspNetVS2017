@@ -1,14 +1,16 @@
 ﻿using Loja.Domain;
 using Loja.Repository.Migrations;
 using Loja.Repository.ModelConfiguration;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Loja.Repository
 {
-    public class LojaDbContext : DbContext
+    public class LojaDbContext : IdentityDbContext
     {
-        public LojaDbContext() : base("lojaConnectionString")
+        public LojaDbContext() 
+            : base("lojaConnectionString")
         {
             //Database.SetInitializer(new LojaDbInitialyzer());
 

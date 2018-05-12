@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-namespace Loja.Mvc.Models
+namespace Loja.Mvc.Areas.Admin.Models
 {
     public class ProdutoViewModel
     {

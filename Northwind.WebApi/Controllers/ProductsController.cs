@@ -58,19 +58,22 @@ namespace Northwind.WebApi.Controllers
 
         // PUT: api/Products/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutProducts(int id, Products products)
+        public IHttpActionResult PutProducts(int id, Products viewModel)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
-            if (id != products.ProductID)
+            if (id != viewModel.ProductID)
             {
                 return BadRequest();
             }
 
-            db.Entry(products).State = EntityState.Modified;
+            //db.Entry(viewModel).State = EntityState.Modified;
+
+            var product = db.Products.Find(id);
+            db.Entry(product).CurrentValues.SetValues(viewModel);
 
             try
             {
@@ -122,9 +125,6 @@ namespace Northwind.WebApi.Controllers
 
             return Ok(product.Order_Details.Select(od => od.Orders).ToList());        
         }
-
-
-
 
         protected override void Dispose(bool disposing)
         {

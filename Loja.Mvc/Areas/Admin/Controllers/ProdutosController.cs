@@ -1,5 +1,5 @@
 ﻿using Loja.Domain;
-using Loja.Mvc.Models;
+using Loja.Mvc.Areas.Admin.Models;
 using Loja.Repository;
 using System;
 using System.Collections.Generic;
@@ -8,15 +8,18 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 
-namespace Loja.Mvc.Controllers
+namespace Loja.Mvc.Areas.Admin.Controllers
 {
+    [Authorize]
     public class ProdutosController : Controller
     {
         private LojaDbContext db = new LojaDbContext();
 
         // GET: Produtos
+        [AllowAnonymous]
         public ActionResult Index()
         {
+            //throw new Exception("Teste");
             return View(Mapear(db.Produtos.ToList()));
         }
 
@@ -55,6 +58,7 @@ namespace Loja.Mvc.Controllers
 
 
         // GET: Produtos/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -75,7 +79,7 @@ namespace Loja.Mvc.Controllers
         {
             ViewBag.Titulo = "Novo Produto";
 
-            return View("~/Views/Produtos/CreateOrEdit.cshtml", Mapear(new Produto()));
+            return View("~/Areas/Admin/Views/Produtos/CreateOrEdit.cshtml", Mapear(new Produto()));
         }
 
         // POST: Produtos/Create
@@ -98,7 +102,7 @@ namespace Loja.Mvc.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View("~/Views/Produtos/CreateOrEdit.cshtml", viewModel);
+            return View("~/Areas/Admin/Views/Produtos/CreateOrEdit.cshtml", viewModel);
         }
 
         private Produto Mapear(ProdutoViewModel viewModel)
@@ -143,7 +147,7 @@ namespace Loja.Mvc.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(viewModel);
+            return View("~/Areas/Admin/Views/Produtos/CreateOrEdit.cshtml", viewModel);
         }
 
         private void Mapear(ProdutoViewModel viewModel, Produto produto)
@@ -154,6 +158,8 @@ namespace Loja.Mvc.Controllers
         }
 
         // GET: Produtos/Delete/5
+        //[Authorize(Roles = "Chefe")]
+        [Authorize(Roles = "Admin, Gerente")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -171,6 +177,8 @@ namespace Loja.Mvc.Controllers
         // POST: Produtos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        //[Authorize(Roles = "Chefe")]
+        [Authorize(Roles = "Admin, Gerente")]
         public ActionResult DeleteConfirmed(int id)
         {
             Produto produto = db.Produtos.Find(id);
