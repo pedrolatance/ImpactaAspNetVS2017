@@ -2,12 +2,13 @@
 using Loja.Repository.Migrations;
 using Loja.Repository.ModelConfiguration;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Loja.Repository
 {
-    public class LojaDbContext : IdentityDbContext
+    public class LojaDbContext : IdentityDbContext<Usuario>
     {
         public LojaDbContext() 
             : base("lojaConnectionString")
@@ -19,6 +20,11 @@ namespace Loja.Repository
 
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+
+        public static LojaDbContext Create()
+        {
+            return new LojaDbContext();
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

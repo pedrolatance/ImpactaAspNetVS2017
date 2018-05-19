@@ -159,7 +159,7 @@ namespace Loja.Mvc.Areas.Admin.Controllers
 
         // GET: Produtos/Delete/5
         //[Authorize(Roles = "Chefe")]
-        [Authorize(Roles = "Admin, Gerente")]
+        [Authorize(Roles = "Master")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

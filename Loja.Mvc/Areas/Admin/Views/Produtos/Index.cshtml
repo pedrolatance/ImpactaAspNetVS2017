@@ -1,10 +1,13 @@
 ﻿@model IEnumerable<Loja.Mvc.Areas.Admin.Models.ProdutoViewModel>
+@using System.Security.Claims
+@using Loja.Mvc.Helpers
+@using Loja.Resources
 
 @{
-    ViewBag.Title = "Produtos";
+    ViewBag.Title = Literal.NomeModuloProdutos;
 }
 
-<h2>Lista de Produtos</h2>
+<h2>@Literal.NomeModuloProdutos</h2>
 
 @if (User.Identity.IsAuthenticated || User.IsInRole("Admin"))
 {
@@ -54,10 +57,14 @@
             <td>
                 @Html.ActionLink("Detalhes", "Details", new { id = item.Id })
 
-                @if (User.Identity.IsAuthenticated || User.IsInRole("Admin"))
+                @if (User.Identity.IsAuthenticated || User.IsInRole("Master"))
                 {
                     @Html.ActionLink("| Editar |", "Edit", new { id = item.Id })
-                    @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
+
+                    if (User.HasClaim("Produto", "Excluir"))
+                    {
+                        @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
+                    }
                 }
             </td>
         </tr>
